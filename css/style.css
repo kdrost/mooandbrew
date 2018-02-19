@@ -1,4 +1,4 @@
-﻿/* ============================================================================================== 
+/* ============================================================================================== 
 This copyright notice must be kept untouched in the stylesheet at all times.
 The original version of this stylesheet and the associated (x)html 
 is available at http://www.script-tutorials.com/bootstrap-one-page-template-with-parallax-effect/
@@ -73,48 +73,27 @@ html, body {
   -o-background-size: cover;
   background-size: cover;
   color: white;
-  border: 6px solid rgb(232,96,38);
 }
 
 #services {
-  background-color: rgb(232,96,38);
+  background-color: white;
   color: white;
 }
 
 #vendors {
-  background-color: white;
-  color: black;
+  background-color: #191d19;
+  border: 5px 5px 5px 0px solid rgb(232,96,38);
+  color: white;
 }
 
-#services .glyphicon {
-  border: 2px solid #FFFFFF;
-  border-radius: 50%;
-  display: inline-block;
-  font-size: 60px;
-  height: 140px;
-  line-height: 140px;
-  text-align: center;
-  vertical-align: middle;
-  width: 140px;
+#sponsors {
+  background-color: #191d19;
+  border: 5px 5px 5px 0px solid rgb(232,96,38);
+  color: white;
 }
 
-#information {
-  background: url(../images/estate.jpg) no-repeat center center fixed; 
-  display: table;
-  height: 800px;
-  position: relative;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-#information .panel {
-  opacity: 0.85;
-}
-
-#google_map {
-  height: 500px;
+#contact {
+	background-color: white;
 }
 
 footer {
