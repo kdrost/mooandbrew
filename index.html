@@ -2,21 +2,32 @@
 <html lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="author" content="Script Tutorials" />
   <title>Moo and Brew Fest 2018</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <!-- attach CSS styles -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script  type="text/javascript" src="js/jquery-1.10.2.js"></script>
   <link href="css/style.css" rel="stylesheet" />
+  
+  <script>
+  $(function() { var logo = $(".logo"); $(window).scroll(function() {
+	var scroll = $(window).scrollTop();
+
+    if (scroll >= 500) {
+      logo.hide();
+    } else {
+		logo.show();
+	}
+	});
+	});
+	
+  </script>
 </head>
 <body>
 	
   <!-- navigation panel -->
-  <nav class="navbar navbar-default navbar-fixed-top"  role="navigation" style="background-color: black; border-bottom:none; margin-top: -10">
-	<img src="images/cow-transparent2.png" width="150px" style="position: absolute !important; float: left !important; z-index:100 !important; margin:auto !important; display:inline-block !important;"/>
+  <nav class="navbar navbar-default navbar-fixed-top"  role="navigation" style="background-color: rgb(28,30,29); border-bottom:none; margin-top: -10">
     <div class="container-fluid" >
-      <!-- Brand and toggle get grouped for better mobile display -->
 	  <div class="navbar-header"  >
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
           <span class="sr-only">Toggle navigation</span>
@@ -30,8 +41,8 @@
       <div class="collapse navbar-collapse" id="navbar-collapse-main">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#home" style="color:white; font-size:12px;font-weight: 550">HOME</a></li>
+		  <li><a href="#event" style="color:white; font-size:12px; font-weight: 550">MOO & BREW</a></li>
           <li><a href="#about" style="color:white; font-size:12px; font-weight: 550">ABOUT THE FARM</a></li>
-		  <li><a href="#event" style="color:white; font-size:12px; font-weight: 550">MOO AND BREW</a></li>
           <li><a href="#vendors" style="color:white; font-size:12px; font-weight: 550">VENDORS</a></li>
           <li><a href="#sponsors" style="color:white; font-size:12px; font-weight: 550">SPONSORS</a></li>
           <li><a href="#contact" style="color:white; font-size:12px; font-weight: 550">CONTACT US</a></li>
@@ -43,18 +54,59 @@
   <!-- first section - Home -->
   <div id="home" class="home">
     <div class="text-vcenter">
-      <h1 style="color: white; font-weight: 750">Moo and Brew</h1>	  
-      <h3 style="color: #f8d442; font-weight: 600">August 24, 2018</h3>
-      <a href="#" class="btn btn-default btn-lg" style="border-radius:20px; background-color: black; color: white">Buy tickets</a>
-    </div>
+	  <img src="images/frontpage.png" width="375px" /><br />
+      <!--<a href="#" class="btn btn-default btn-lg" style="border-radius:20px; background-color: black; color: white">Buy tickets</a>-->
+    </div> <br />
   </div>
- 
+  
+  <div id="timer">
+	<div class="text-vcenter">
+		30 days 00 hours 00 minutes
+	</div>
+  </div>
+   
+   <div id="event" class="pad-section">
+      <div class="row text-vcenter text-center">
+	  <div class="col-sm-2"></div>
+	  <div class="col-sm-8">
+	  <div class="text-vcenter">
+			    <h2>MOO & BREW</h2> <hr />
+				<p style="font-size: 18px">The Moo & Brew at Steckle Farm is a fund
+				raiser in support of the J. Steckle Heritage
+				Homestead. <br /><br />
+				
+				Our feature food for the evening will be
+				sliders prepared by KWs best independent
+				restaurants. Beef, pork and vegetarian
+				sliders will be available – and our 400
+				guests will wash that down with local
+				brews. Steckle Farm Blue Ribbon award
+				will be given to the best slider and beer.</p>
+	  </div>
+	  <div class="row text-center">
+			<div class="ui-widget">
+			  <h1 class="ui-value">$30</h1>
+			  <span class="ui-label">Ticket</span>
+			</div>
+
+			<div class="ui-widget">
+			  <h1 class="ui-value">400</h1>
+			  <span class="ui-label">Guests</span>
+			</div>
+
+			<div class="ui-widget">
+			  <h1 class="ui-value">30+</h1>
+			  <span class="ui-label">Vendors</span>
+			</div>
+	  </div>
+	  </div>
+	  </div>
+  </div>
   <!-- second section - About -->
   <div id="about" class="pad-section">
-    <div class="container">
-      <div class="row">
-	  <div class="col-sm-2 text-center"></div>
-	  <div class="col-sm-8">
+      <div class="row text-vcenter">
+	  <div class="col-sm-6">
+	 
 		<h2 class="text-center">About the farm</h2> <hr />
 		
          <p class="lead"> The J. Steckle Heritage Homestead not-forprofit
@@ -68,36 +120,15 @@
 			program for teenagers, and summer camps
 			where kids get the chance to learn about
 			farm life and healthy food.</p>
-      </div>
-	  <div class="col-sm-2 text-center"></div>
+      </div>	  
+	  <div class="col-sm-6">
+		<img src="images/12004980_10153332658367946_578515974585707398_n.jpg" style="width: 250px; border: 2px solid rgb(28,30,29)" /><br /> <br />
+		<img src="images/FamilyFun-32.jpg" style="width: 400px; border: 2px solid rgb(28,30,29)" />
 	  </div>
-    </div>
+
+	  </div>
   </div>
   <!-- /second section -->
-  
-   <div id="event" class="pad-section">
-    <div class="container">
-	  
-      <div class="row text-center">
-	  <div class="col-sm-2 text-center"></div>
-	  <div class="col-sm-8">
-			    <h2 class="text-center">Moo & Brew</h2> <hr />
-				<p style="font-size: 18px">The Moo & Brew at Steckle Farm is a fund
-				raiser in support of the J. Steckle Heritage
-				Homestead. <br /><br />
-				
-				Our feature food for the evening will be
-				sliders prepared by KWs best independent
-				restaurants. Beef, pork and vegetarian
-				sliders will be available – and our 400
-				guests will wash that down with local
-				brews. Steckle Farm Blue Ribbon award
-				will be given to the best slider and beer.</p>
-      </div>
-	  </div>
-	  <div class="col-sm-2 text-center"></div>
-	</div>
-  </div>
 
   <!-- third section - Services -->
   <div id="vendors" class="pad-section">
@@ -119,29 +150,28 @@
   <div id="sponsors" class="pad-section">
     <div class="container text-center">
 	  <h2 class="text-center">Sponsors</h2> <hr />
-	  <image src="images/coming_soon_icon.png" style="width:20% !important"/>
-      <image src="images/coming_soon_icon.png" style="width:20% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:20% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:20% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:20% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:20% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:20% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:20% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:230px !important"/>
+      <image src="images/coming_soon_icon.png" style="width:230px !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:230px !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:230px !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:230px !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:230px !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:230px !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:230px !important"/>
     </div>
   </div>
   <!-- /third section -->
 
   <!-- fourth section - Information -->
   <div id="contact">
-	
+	<div class="container" style="width: 100%">
       <div class="row">
-		<div class="col-sm-6">
+		<div class="col-sm-6" style="padding-left:0px">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2898.6639918047135!2d-80.48188468468582!3d43.404951979130665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf5684d697c53%3A0x8cbb2b8de5f54176!2sSteckle+Heritage+Homestead!5e0!3m2!1sen!2sca!4v1519072998331" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
 		<h3>Contact us</h3>
-		<div class="container">
-		<form>
+		<form width="100%">
 			<div class="form-group row">
 			<label for="inputEmail" class="col-sm-2 col-form-label" style="padding-top: 7px">Name</label>
 			<div class="input-group">
@@ -185,9 +215,9 @@
 		</div>
 
 		</form>
-	</div>
 				</div>
 			  </div>
+		</div>
 	</div>
   <!-- /fourth section -->
 
