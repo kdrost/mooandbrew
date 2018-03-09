@@ -21,6 +21,37 @@
 			.end()
 			.appendTo('#slideshow');
 		},  5000);
+		
+		function getTimeRemaining(endtime){
+		  var t = Date.parse(endtime) - Date.parse(new Date());
+		  var seconds = Math.floor( (t/1000) % 60 );
+		  var minutes = Math.floor( (t/1000/60) % 60 );
+		  var hours = Math.floor( (t/(1000*60*60)) % 24 );
+		  var days = Math.floor( t/(1000*60*60*24) );
+		  return {
+			'total': t,
+			'days': days,
+			'hours': hours,
+			'minutes': minutes,
+			'seconds': seconds
+		  };
+		}
+		
+		var deadline = new Date("Aug 24, 2018 18:00:00").getTime();
+		var x = setInterval(function() {
+		var now = new Date().getTime();
+		var t = deadline - now;
+		var days = Math.floor(t / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+		var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((t % (1000 * 60)) / 1000);
+		document.getElementById("demo").innerHTML = days + " days " 
+		+ hours + " hours " + minutes + " minutes " + seconds + " seconds";
+			if (t < 0) {
+				clearInterval(x);
+				document.getElementById("demo").innerHTML = "EXPIRED";
+			}
+		}, 1000);
 	});
 	
   </script>
@@ -55,16 +86,17 @@
   </nav>
   <!-- first section - Home -->
   <div id="home" class="home">
+  	<br />
     <div class="text-vcenter">
 	  <img src="images/frontpage.png" style="width: 28%; min-width: 250px;" /><br />
       <!--<a href="#" class="btn btn-default btn-lg" style="border-radius:20px; background-color: black; color: white">Buy tickets</a>-->
-	  <h4 style="color:#ecece0; font-weight: 600">BEERS&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;BURGERS&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;CHARITY</h4>
+	  <h4 style="color:#ecece0; font-weight: 500">BEERS&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;BURGERS&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;CHARITY</h4>
     </div> <br />
   </div>
   
   <div id="timer">
-	<div class="text-vcenter">
-		30 days 00 hours 00 minutes
+	<div id="demo" class="text-vcenter">
+		
 	</div>
   </div>
    
@@ -117,6 +149,15 @@
 				<div>
 				 <img src="images/FamilyFun-32.jpg" style="border: 2px solid black; width:90%">
 				</div>
+				<div>
+				 <img src="images/1356987_orig.jpg" style="border: 2px solid black; width:90%">
+				</div>
+				<div>
+				 <img src="images/bank barn.jpg" style="border: 2px solid black; width:90%">
+				</div>				
+				<div>
+				 <img src="images/DJI_0033.jpg" style="border: 2px solid black; width:90%">
+				</div>					
 			</div>
 			</div>
 		</div>
@@ -143,15 +184,15 @@
   <div id="vendors" class="pad-section">
     <div class="container text-center">
 	  <h2 class="text-center">Vendors</h2> <hr />
-	  <image src="images/coming_soon_icon.png" style="width:30% !important"/>
-      <image src="images/coming_soon_icon.png" style="width:30% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:30% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:30% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:30% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:30% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:30% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:30% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:30% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:25% !important"/>
+      <image src="images/coming_soon_icon.png" style="width:25% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:25% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:25% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:25% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:25% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:25% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:25% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:25% !important"/>
     </div>
   </div>
   <!-- /third section -->
@@ -160,15 +201,15 @@
   <div id="sponsors" class="pad-section">
     <div class="container text-center">
 	  <h2 class="text-center">Sponsors</h2> <hr />
-	  <image src="images/coming_soon_icon.png" style="width:30% !important"/>
-      <image src="images/coming_soon_icon.png" style="width:30% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:30% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:30% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:30% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:30% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:30% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:30% !important"/>
-	  <image src="images/coming_soon_icon.png" style="width:30% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:25% !important"/>
+      <image src="images/coming_soon_icon.png" style="width:25% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:25% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:25% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:25% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:25% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:25% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:25% !important"/>
+	  <image src="images/coming_soon_icon.png" style="width:25% !important"/>
     </div>
   </div>
   <!-- /third section -->
