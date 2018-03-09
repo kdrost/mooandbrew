@@ -21,6 +21,19 @@
 	});
 	});
 	
+	$( document ).ready(function() {
+		$("#slideshow > div:gt(0)").hide();
+
+		setInterval(function() { 
+		  $('#slideshow > div:first')
+			.fadeOut(1000)
+			.next()
+			.fadeIn(1000)
+			.end()
+			.appendTo('#slideshow');
+		},  5000);
+	});
+	
   </script>
 </head>
 <body>
@@ -103,34 +116,28 @@
 	  </div>
 	  </div>
   </div>
-  <!-- second section - About -->
-  <div id="about" class="pad-section">
+  
+   <div id="about" class="pad-section">
       <div class="row text-vcenter">
 	  <div class="col-sm-6">
-	 
-		<h2 class="text-center">About the farm</h2> <hr />
-		
-         <p class="lead"> The J. Steckle Heritage Homestead not-forprofit
-			organization was established in 1988
-			by Dr. Jean Steckle who donated the land
-			and facilities to preserve the site as an
-			education centre for the youth of our
-			community. We have education programs
-			that are attended by primary schools
-			throughout the region, a Junior Leader
-			program for teenagers, and summer camps
-			where kids get the chance to learn about
-			farm life and healthy food.</p>
-      </div>	  
-	  <div class="col-sm-6">
-		<img src="images/12004980_10153332658367946_578515974585707398_n.jpg" style="width: 250px; border: 2px solid rgb(28,30,29)" /><br /> <br />
-		<img src="images/FamilyFun-32.jpg" style="width: 250px; border: 2px solid rgb(28,30,29)" />
+		  <div class="text-vcenter">
+				<h2>ABOUT THE FARM</h2> <hr />
+				<p style="font-size: 20px">The J. Steckle Heritage Homestead not-forprofit
+				organization was established in 1988
+				by Dr. Jean Steckle who donated the land
+				and facilities to preserve the site as an
+				education centre for the youth of our
+				community. We have education programs
+				that are attended by primary schools
+				throughout the region, a Junior Leader
+				program for teenagers, and summer camps
+				where kids get the chance to learn about
+				farm life and healthy food</p>
+		  </div>
 	  </div>
-
 	  </div>
   </div>
-  <!-- /second section -->
-
+ 
   <!-- third section - Services -->
   <div id="vendors" class="pad-section">
     <div class="container text-center">
