@@ -9,18 +9,7 @@
   <script  type="text/javascript" src="js/jquery-1.10.2.js"></script>
   <link href="css/style.css" rel="stylesheet" />
   
-  <script>
-  $(function() { var logo = $(".logo"); $(window).scroll(function() {
-	var scroll = $(window).scrollTop();
-
-    if (scroll >= 500) {
-      logo.hide();
-    } else {
-		logo.show();
-	}
-	});
-	});
-	
+  <script>	
 	$( document ).ready(function() {
 		$("#slideshow > div:gt(0)").hide();
 
@@ -69,7 +58,7 @@
     <div class="text-vcenter">
 	  <img src="images/frontpage.png" style="width: 28%; min-width: 250px;" /><br />
       <!--<a href="#" class="btn btn-default btn-lg" style="border-radius:20px; background-color: black; color: white">Buy tickets</a>-->
-	  <h4 style="color:white">BEERS&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;BURGERS&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;CHARITY</h4>
+	  <h4 style="color:#ecece0; font-weight: 600">BEERS&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;BURGERS&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;CHARITY</h4>
     </div> <br />
   </div>
   
@@ -119,8 +108,20 @@
   
    <div id="about" class="pad-section">
       <div class="row text-vcenter">
-	  <div class="col-sm-6">
-		  <div class="text-vcenter">
+		<div class="col-sm-6">
+			<div class="text-vcenter">
+			<div id="slideshow">
+				<div>
+				 <img src="images/unnamed.jpg" style="border: 2px solid black; width:90%">
+				</div>
+				<div>
+				 <img src="images/FamilyFun-32.jpg" style="border: 2px solid black; width:90%">
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+		  <div>
 				<h2>ABOUT THE FARM</h2> <hr />
 				<p style="font-size: 20px">The J. Steckle Heritage Homestead not-forprofit
 				organization was established in 1988
@@ -134,7 +135,7 @@
 				where kids get the chance to learn about
 				farm life and healthy food</p>
 		  </div>
-	  </div>
+		</div>
 	  </div>
   </div>
  
@@ -183,21 +184,21 @@
 		<h3>Contact us</h3>
 		<form width="100%" style="margin-left: 10px">
 			<div class="form-group row">
-			<label for="inputEmail" class="col-sm-2 col-form-label" style="padding-top: 7px">Name</label>
+			<label for="inputEmail" class="col-sm-4 col-form-label" style="padding-top: 7px">Name</label>
 			<div class="input-group">
 				<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 				<input name="email" placeholder="Name" class="form-control" style="width: 250px" type="text">
 			</div>
 			</div>
 			<div class="form-group row">
-			<label for="inputEmail" class="col-sm-2 col-form-label" style="padding-top: 7px">Email</label>
+			<label for="inputEmail" class="col-sm-4 col-form-label" style="padding-top: 7px">Email</label>
 			<div class="input-group">
 				<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
 				<input name="email" placeholder="E-Mail Address" placeholder="E-Mail Address" class="form-control" style="width: 250px" type="text">
 			</div>
 			</div>
 			<div class="form-group row">
-			<label for="inputEmail" class="col-sm-2 col-form-label" style="padding-top: 7px">Reason for email</label>
+			<label for="inputEmail" class="col-sm-4 col-form-label" style="padding-top: 7px">Reason for email</label>
 			<div class="input-group">
 				<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
 				<select name="state" class="form-control selectpicker" style="width: 250px">
@@ -210,7 +211,7 @@
 			</div>
 			</div>
 			<div class="form-group row">
-			<label for="inputEmail" class="col-sm-2 col-form-label" style="padding-top: 7px">Message</label>
+			<label for="inputEmail" class="col-sm-4 col-form-label" style="padding-top: 7px">Message</label>
 			<div class="input-group">
 				<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
 					<textarea class="form-control" name="comment" style="width: 250px" placeholder="Message"></textarea>
@@ -218,9 +219,8 @@
 			</div>
 		<!-- Button -->
 		<div class="form-group">
-		  <label class="col-md-4 control-label"></label>
-		  <div class="col-md-4">
-			<button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+		  <div class="col-md-4" style="padding:0px" >
+			<button type="submit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button>
 		  </div>
 		</div>
 
