@@ -74,7 +74,7 @@ html, body {
 }
 
 #event {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(../images/pexels-beer.jpeg) no-repeat center center fixed;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(../images/burger.jpg) no-repeat center center fixed;
   display: table;
   height: 100%;
   position: relative;
@@ -87,9 +87,17 @@ html, body {
 }
 
 #vendors {
-  background-color: #191d19;
-  border: 5px 5px 5px 0px solid rgb(232,96,38);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(../images/pexels-beer.jpeg) no-repeat center center fixed;
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: white;
+  border: 5px solid rgb(28,30,29);
 }
 
 #sponsors {
@@ -99,4 +107,5 @@ html, body {
 
 #contact {
 	background-color: white;
+	border: 5px solid rgb(28,30,29);
 }
